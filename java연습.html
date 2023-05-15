@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/js/myscript.js"></script>
+</head>
+<script>
+    // var x;
+    // x="Hello World";
+    // alert(x);
+
+    // var s=100;
+    // document.write(s + "<br>");
+    // var s=('홍길동');
+    // document.write(s + "<br>");
+
+    // var q="Hello guys";
+    // var w="How are you" + " today?";
+
+    // document.write(q + "<br>");
+    // document.write(w + "<br>");
+    // document.write(q.toUpperCase() + "<br>");
+
+    // var age= prompt("만 나이로 입력하세요.", "만 나이로 입력합니다.");
+
+    // var g,h;
+    // var input;
+
+    // input=prompt("정수를 입력하세요.");
+    // g = parseInt(input);
+    // input=prompt("정수를 입력하세요.");
+    // h = parseInt(input);
+
+    // document.write(g + h + "<br>");
+
+    // function calc(){
+    //      var g = document.getElementById("g").value;
+    //      var h = document.getElementById("h").value;
+    //      var sum;
+
+    //      sum= parseInt(g) + parseInt(h);
+    //      document.getElementById("sum").value = sum;
+    // }
+    // var msg = "";
+    // var time = new Date().getHours();
+    // if(time < 12){
+    //     msg = "Good Morning";
+    // }
+    // else if(time < 18){
+    //     msg = "Good Afternoon";
+    // }
+    // else{
+    //     msg = "Good evening";
+    // }
+    // alert(msg);
+
+    var computerNumber = 53; //정답
+    var nGuesses = 0; //추측 횟수
+
+    function guess(){
+        var result =""; //결과 메시지
+
+        //사용자가 입력한 값을 받아서 변수 number에 대입한다.
+        var number = parseInt(document.getElementById("user").value);
+        nGuesses++; //추측 횟수를 증가시킨다.
+
+        if(number == computerNumber)result="성공입니다."
+        else if(number<computerNumber)result="보다 높습니다.";
+        else result="보다 낮습니다.";
+
+        document.getElementById("result").value=result;
+        document.getElementById("guesses").value=nGuesses;
+        return true;
+
+    }
+
+
+
+</script>
+<body>
+    <button type="button" onclick="alert('반갑습니다.')"></button>
+
+    <!-- <h3> 덧셈 계산기</h3>
+    <form name="myform" action="..." method="post">
+        첫번째 정수:
+        <input id="x"/><br>
+        두번째 정수:
+        <input id="y"/><br>
+        합계:
+        <input id="sum"/><br>
+        <input type="button" value="계산" onclick="calc();">
+    </form> -->
+
+    <h2>숫자 맞추기 게임</h2>
+    이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. 숫자는 1부터 100사이에 있습니다.
+    <form>
+        숫자:
+        <input type="text" id="user" size="5">
+        <input type="button" value="확인" onclick="guess();"> <br>
+        추측횟수:
+        <input type="text" id="guesses" size="5">
+        힌트:
+        <input type="text" id="result" size="16">
+    </form>
+
+</body>
+</html>
