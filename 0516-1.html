@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0516-1</title>
+    <script src="/js/0516-1.js"></script>
+    
+</head>
+
+<body>
+    <h2>버튼을 클릭했을때 배경색 변경하기</h2>
+    <!-- <button id="button">버튼</button> -->
+    
+    <div id="pallet" style="width: 200px; height: 200px; background-color: gray; font-size: 24px; text-align: center; line-height: 200px;">
+        박스 영역
+    </div>
+    <button id="button2">팔레트버튼</button>
+    <button id="button3" onclick="console.log('hi')">버튼3</button>
+    <button id="button4" onclick="chColor(this,color)">버튼4</button>
+    <button id="button5" onclick="chColor(this,color)">버튼5</button>
+    <button id="button6" onmouseover="chColor2(this,'yellow')" onmouseout="chColor2(this,'')">yellow</button>
+    <button id="button7" onmouseover="chColor2(this,'pink')" onmouseout="chColor2(this,''),border=''">pink</button>
+    <button id="button8" onmouseover="style.border='1px solid red'; style.background='red'"></button>
+    <script>
+        //글자색 변경
+        var color=["orange", "red", "skyblue"]
+        var k= 0;
+        var chColor=(obj,color)=>{
+            if (k>color.length) k=0;
+            console.log(color[k]+"가 적용됨");
+            obj.style.color=color[k];
+            k++;
+        }
+
+
+        //마우스 올리면
+        function chColor2(obj,colorname){
+            //obj.onmouseover=function(){
+                obj.style.background=colorname;
+                console.log(colorname + ' on');
+            //}
+            //obj.onmouseout=function(){
+                // obj.style.background='';
+                // obj.style.border='1px solid black'
+                // console.log(colorname + ' off');
+            //}
+        }
+    
+        // var body=document.getElementsByTagName('body')[0]; //배열
+        // var pallet=document.querySelector('#pallet');
+
+        //객체. 이벤트타입=이벤트리스너;
+        // var j= 0;
+        // button.onclick=function(){
+        //     if(j>color.length) j=0;
+        //     body.style.backgroundColor=color[j];
+        //     j++;
+        // }
+        // 버튼하나 만들어서, div 박스 하나 생성해서 버튼클릭하면 배경색 변경
+        // var palletcolor=["red", "orange", "yellow", "green", "blue", "navy", "purple"]
+        var palletcolor=new Array("red", "orange", "yellow", "green", "blue", "navy", "purple")
+        var pallettextcolor=["pink", "oranged", "gold", "white", "skyblue", "pink", "yellow"]
+        var palletfontsize=["14px", "18px", "22px", "26px", "30px", "26px", "22px"]
+
+        var i=0;
+        button2.onclick=()=>{
+            if(i>palletcolor.length) i=0;
+            pallet.style.background=palletcolor[i];
+            pallet.style.color=pallettextcolor[i];
+            pallet.style.fontSize=palletfontsize[i];
+            i++;
+        }
+
+
+    </script>
+</body>
+</html>
