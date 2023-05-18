@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 3일차</title>
+    
+    
+</head>
+<body>
+    <button id="stimpack">스팀팩</button>
+    <button id="heal">힐</button><hr>
+    <script>
+        var stimpack=document.getElementById('stimpack');
+        var heal=document.getElementById('heal');
+        
+        function Marine(name,level,HP,speed)
+        {
+            this.name=name;
+            this.level=level;
+            this.HP=HP;
+            this.speed=speed;
+            this.stimpack=function(){
+                if(this.HP>0){
+                document.write(this.name + "이 스팀팩을 사용합니다.<br>");
+                this.HP -=10;
+                document.write("HP : " + this.HP + "<br>")
+                this.speed += 2;
+                document.write("공격속도 : " + this.speed + "<br>")
+                this.level++;
+                document.write(this.name + "이 " + this.level + "레벨이 되었습니다." + "<hr>")
+            
+            this.heal=function(){
+                document.write(this.name + "에게 힐을 사용합니다.<br>")
+                this.HP +=3;
+                document.write("HP가 3만큼 회복<br>HP : " + this.HP + "<hr>");
+            }}document.write("마린이 사망하였습니다.");
+        }
+        
+        }
+        var 마린 = new Marine("마린",1,40,10);
+        마린.stimpack(), 마린.heal(),마린.stimpack(),마린.stimpack(),마린.heal(),마린.stimpack(),마린.stimpack(),마린.heal()
+//==================================================================================
+        // stimpack.addEventListener('click',function(){
+        //         document.write(this.name + "이 스팀팩을 사용합니다.<br>");
+        //         this.HP -=10;
+        //         document.write("HP : " + this.HP + "<br>")
+        //         this.speed += 2;
+        //         document.write("공격속도 : " + this.speed + "<br>")
+        //         this.level++;
+        //         document.write(this.name + "이 " + this.level + "레벨이 되었습니다." + "<hr>")
+        //         });
+                
+        //         heal.addEventListener('click',function(){
+        //         document.write(this.name + "에게 힐을 사용합니다.<br>")
+        //         this.HP +=3;
+        //         document.write("HP가 3만큼 회복<br>HP : " + this.HP + "<hr>");
+        //     });
+
+
+    </script>
+
+
+
+
+    <script src="/js/0518-4.js"></script>
+</body>
+</html>
