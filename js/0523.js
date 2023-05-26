@@ -16,20 +16,20 @@
 // console.log(num2.toFixed(2));  // 30.12
 // console.log(num2.toFixed(0));  // 30
 // // isNaN() 
-var a = "100";
-var b = 100;
-console.log(isNaN(a)); // false 
-console.log(isNaN(b));    // false 
-console.log(isNaN("wel")); // true
-console.log(typeof a); // string
-console.log(typeof b); // number
-// Number() , parseInt() 정수
-console.log(typeof Number(a));
-var margin = "10px";
-var margin1 = Number(margin);  // "300"
-var margin2 = parseInt(margin);
-console.log(margin1);  // NaN
-console.log(margin2);  // 10
+// var a = "100";
+// var b = 100;
+// console.log(isNaN(a)); // false 
+// console.log(isNaN(b));    // false 
+// console.log(isNaN("wel")); // true
+// console.log(typeof a); // string
+// console.log(typeof b); // number
+// // Number() , parseInt() 정수
+// console.log(typeof Number(a));
+// var margin = "10px";
+// var margin1 = Number(margin);  // "300"
+// var margin2 = parseInt(margin);
+// console.log(margin1);  // NaN
+// console.log(margin2);  // 10
 
 // parseFloat() 부동소수점반환
 var padding="18.5%"
