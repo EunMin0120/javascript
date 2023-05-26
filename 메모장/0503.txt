@@ -1,0 +1,64 @@
+CSS 관련 기본공식
+CSS 반응형웹
+
+
+table
+column
+아코디언/ 풍선도움말/ 스위치
+태블릿페이지/ 모바일페이지
+3d예제/css넘버링
+
+5월 12일까지
+CSS 관련수업
+SASS, 부트스트랩
+
+대상주식회사
+
+표스타일속성-table
+
+=============================
+table 관련수업
+
+table- 표스타일속성
+(게시판/목록)
+
+caption-side
+border
+border-collapse
+border-spacing
+empty-cells
+width, height
+table-layout
+text-align
+vertical-align
+
+caption은 숨김처리
+----------------------------------
+표의 위치지정
+caption-side: top/bottom;
+
+table-layout: fixed/auto*
+
+text-align
+vertical-align
+
+display: none/ block/ inline/ inline-block
+	flex/ table/table-cell
+
+-------------------------------
+
+부트스트랩
+
+버전5부터 제이쿼리 포함x
+
+
+
+
+
+
+
+
+
+
+
+

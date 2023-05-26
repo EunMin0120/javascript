@@ -1,0 +1,119 @@
+CSS기본속성예제
+
+
+
+
+
+
+
+
+그림자속성
+벤더프리픽스
+그라디언트
+변환속성
+애니메이션속성
+반응형웹구현속성
+flex
+다단속성
+테이블관련
+------------------
+
+위치속성
+z-index
+overflow
+position
+float
+
+부트스트랩-CSS프레임워크
+사스 sass, less
+
+------------------------
+
+도스명령어
+GUI 커맨드 -> 키보드
+GUI 환경-> 마우스 인터페이스
+
+dir,
+윈도우 -> 폴더
+cui -> 디렉토리
+
+cd\ -> c:\ 루트 디렉토리
+d: -> d드라이브로 이동
+cd -> 원하는 디렉토리로 이동
+
+overflow: visible/scroll/hiddenauto
+overflow-x:scroll
+overflow-y:scroll
+
+[기본공식3]
+자식박스에 position: absolute를 주면
+부모에는 높이 height값을 주어야한다.
+
+[그림자속성]
+box-shadow: 오른쪽 아래 흐림 색상
+text-shadow
+
+box-shadow: inset x y 흐림 퍼짐 색
+	      outset* 기본값
+내부그림자/외부그림자
+
+=======================================
+
+그라디언트
+css로 그라디언트
+
+css레이아웃방식
+1) float
+2) position
+3) flex
+4) grid
+
+
+========================================
+
+세로네비게이션바
+
+li*8>a[href=#]{a}>span*2
+
+
+
+
+
+
+
+지마켓
+ul>(li>a[href]>ol>(li>a[ href]>dl>(dt*3))3)*9
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

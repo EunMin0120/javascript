@@ -1,0 +1,155 @@
+CSS구현요소 실습예제
+CSS레이아웃설계 예제
+CSS관련 기본공식
+CSS반응형웹
+
+@import
+@font-face
+@keyframes
+@media
+
+==============================
+
+wrap -> PC
+container -> Mobile
+
+h1태그도 하나
+@media
+@import
+
+screeen.css
+print.css
+
+장비
+모바일,TV모니터, 리더기
+, 프린터, 지문인식기
+
+
+
+screen에 입력하는건 평소처럼 body에 보이는부분
+print.css는 ctrl+P누르면 인쇄창에서 보이는부분
+
+@media
+
+모바일    767px 480px
+태블릿    768px
+PC          960px 1024px 1280px
+==============================
+방향전환
+orientation: portrait (세로화면)
+orientation: landscape (가로화면)
+==============================
+웹페이지의 단구조로 분류
+데스크탑 3단
+테블릿 2단
+모바일 1단
+(그리드구조)
+
+==============================
+flex 속성
+
+flex-direction: row/columm
+          row-inverse/column-inverse
+row*기본값
+
+부모 => display: flex;
+자식=> float
+
+flex-wrap: nowrap/wrap/wrap-reverse
+	줄안바꿈/줄바꿈
+flex-flow: column wrap;
+order: 1/2/3...순서
+order: 0* 기본값
+
+flex-grow: 얼마나 늘일지
+flex-shrink: 얼마나 줄일지
+flex-basis: 기본 크기지정
+
+flex: 2   1   auto;
+flex: 2   1   0;
+  grow shrink basis
+
+flex 배치속성 - 수평정렬
+justify-content:
+flex start*/ flex-end/ center/
+space-between/ space-around/space-evenly
+
+flex 배치속성 - 수직정렬
+align-items: stretch*/ flex-start/ flex-end/
+center/ baseline
+align-self: stretch*/ flex-start/ flex-end/
+center/ baseline
+
+flex-wrap: wrap
+================================
+<<오후수업>>
+
+Grid
+
+그리드시스템
+그리드레이아웃
+정적그리드 -px
+동적그리드 -%
+반응형그리드-px+%
+
+
+
+1단 2단 3단 4단 6단 12단
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+flex
+transition
+animation
+table
+grid
+column
+
+
+
+
+nav>ul>li*5>a[href=#]{menu-&}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

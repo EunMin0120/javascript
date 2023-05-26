@@ -1,0 +1,94 @@
+웹페이지 제작하기
+--------------------------------
+데스크탑 페이지
+태블릿 페이지
+모바일 페이지
+사이트맵 제작하기
+--------------------------------
+
+고정형 -> px
+유동형 -> %, rem, em, vw
+반응형 -> @media 쿼리 해상도별로 구분
+
+.row:after{
+ content:''; display:block; clear:both;
+}
+float 해제되고 자식박스가 잘리지 않게 처리
+
+CSS속성
+transition
+transform
+animation
+table
+column
+
+transition-duration: 시간
+transition-delay: 지연시간
+transition-property: 속성
+transition-timing-funcition: 변형함수
+
+transition:
+
+
+cubic-bezier.com
+
+animation 속성
+
+animation-name:
+animation-duration:
+animation-delay:
+animation-teration-count:
+animation-play-state:
+animation-timing-function:
+animation-fill-mode:
+animation-direction:
+
+animation:
+
+키프레임: ㅇpx만큼 이동하고, ㅇpx까지 이동해라.
+@keyframes 이름{
+0{}
+50{}
+100{}
+}
+====================================
+<<오후수업>>
+
+이미지 슬라이드
+1) 자동 슬라이드
+2) 좌우버튼 슬라이트
+3) 롤링배너버튼 슬라이드
+4) 터치 슬라이드
+------------------------------------
+제이쿼리 swiper.js 라이브러리
+              sticky, bxslider
+
+
+슬라이드 태그 구조
+
+<canvas>
+   <panel>
+       <img>
+       <버튼>
+----------------------------------
+1) CDN
+2) 다운로드
+3) 설치방식
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

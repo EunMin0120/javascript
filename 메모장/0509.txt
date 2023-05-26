@@ -1,0 +1,48 @@
+flex를 쓰지 않는
+
+1. 고정형
+2. 유동형
+3. 반응형
+
+
+레이아웃
+#wrap
+#container
+#main_header
+#main_footer
+#main_content
+
+name 속성 -> 데이터 바인딩
+
+
+
+
+<<구직 사이트>>
+
+잡코리아
+디자인그룹나인
+
+
+jQuery library
+제이쿼리 라이트박스 사용법
+colorbox 홈페이지
+jacklmoore.com
+
+
+html- data속성
+사용자 정의 속성
+data-
+data- role
+data- page
+
+
+
+
+
+
+
+
+
+
+
+

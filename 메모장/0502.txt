@@ -1,0 +1,76 @@
+탭키가 들어가는 태그
+a
+button
+input
+
+h1, p 태그는 탭키가 자동포커스되지 않지만
+tabindex="1" 라는 속성을 주면 된다.
+
+<h1 tabindex="1"> welcome </h1>
+
+skip 네비게이션 바
+ul>li>a
+div>a -> position: absolute; top:-100px
+a:focus{ top:0;}
+
+------------------------------
+transform
+
+에 들어가는 함수
+
+translate(x,y)
+rotate(90deg) 각도
+scale(1.5)
+skew(45deg) 각도
+
+중심점
+transform-origin: left top centere right bottom px %
+
+3차원
+translate3d
+rotate3d
+scale3d (x,y,z)
+
+perspective 원근감 0~200
+transform-style: preserve-3d; 3차원으로
+
+================================
+sass 수업
+
+페이지가 많을때
+aa.css
+cd.css
+--------------------------------
+
+$ : 선언   &: 자기자신 @mixin: 함수 @include: 함수호출
+<<자주쓰는 mixin>>
+@mixin test{
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+--------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

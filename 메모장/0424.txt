@@ -1,0 +1,206 @@
+nav>ul>li
+이 사이에는 태그 사용금지
+
+CSS배치관련속성
+
+position
+float
+flex
+z-index
+overflox:hidden
+clear:both
+
+박스는 기본적으로 세로방향 (행단위)
+
+
+박스를 가로로 배치하는 방법
+1) float
+2) display:inline-block
+3) display:inline
+4) flex
+5) position:absoulte
+6) grid 방식
+
+*float 처리했을때 float 해제하는 5가지 방법
+
+1. 바로 다음에 나오는 박스에 clear:both 처리.
+2. 부모박스를 float 처리.
+3. 부모박스에 overflow:hidden
+4. 부모에 높이를 줌. (유지보수가 어렵다.)
+5. 가상요소 : after를 준다.
+      부모:after{
+	content: ' ';
+	display: block;
+	clear: both;
+}
+가장 좋은 방식.
+
+display: block; 박스
+가로세로 크기지정이 가능하고
+전체 margin, 전체 padding이 가능하다.
+세로방향으로 배치된다.
+
+display: inline-block;
+가로세로 크기지정이 가능하고
+박스와 같으나 우측으로 배치된다.
+글자이면서 박스형태
+예) img, input, button,
+
+text-align 속성은 박스내에서 글자정렬 박스를 정렬하기 위한 속성이 아니다.
+
+
+3) display: inline
+글자로 속성이 바뀐다.
+보통 네비게이션바에서 씀
+margin은 상하마진이 안된다.
+그래서 상하마진은 line-height로 준다.
+inline은 글자라도 float 처리하면 박스로 바뀜
+
+4) flex / grid 방식
+부모박스에 display: flex;
+반응형웹, 유동형웹에 자주 사용
+
+flex: 1; 1배로 공동분배
+justify-content: space-between;
+		space-around;
+		sapce-evenly;
+		flex-start;*기본값
+5) position: absolute;
+자식에 position: absolute를 주면
+부모박스에 position: relative를 준다.
+
+자식에 position: absolute를 주면
+부모박스에 position:relative를 준다.
+부모에는 높이값을 주어야한다.
+자식의 위치이동은 left, top, right, bottom으로 지정할 수 있다.
+
+position:relative 상대적, absolute 절대적
+static(기본값), sticky, fixed
+
+
+키워드단위
+
+크기단위
+%, em, px
+1pc(파이카)=12pt
+1pt = 1/72인치
+1ex = 소문자 x의 크기
+1em = 대문자 M의 크기
+	12pt = 16px, 100%
+
+1rem: root em의 줄임말
+html{ font-size: 16px;}
+2rem -> 32px
+1vw : viewport width
+
+vw to px 한 화면을 꽉 채움 (전체화면)
+
+width: 100vw;
+
+==================================
+<<오후수업>>
+
+#FF00FF hex코드 16진수
+rgb( red, green, blue) RGB색상단위
+   0~255(8비트)
+rgba( red, green, blue, alpha) 
+		    불투명도 0~1
+hsl(hue, saturation, lightness)
+    색상    채도         명도
+  0~360  0~100%    0~100%
+hsla(h,s,l,a)
+
+#f00 = #ff0000
+
+색상환
+
+색대비 검사
+3:1 이상 -> 4.5:1 이상
+웹 접근정에 걸린다.
+==================================
+URL 단위
+background-image: url('');
+
+================================
+CSS속성
+
+  가시속성
+
+display: none/inline/inline-block/block
+	flex/table
+visibility: hidden/visible
+opacity: 0~1
+font-size: 0
+width: 0; height: 0; overflow: hidden;
+text-indent: -9999px;
+position: absolute; left: -9999px;
+숨기는 기술들
+
+display: none;
+화면에서 사라지고, 공간을 차지하지 않는다.
+스크린리더가 내용을 무시한다.
+
+visibility: hidden;
+화면에서 사라지지만 공간을 차지한다.
+스크린리더가 내용을 무시한다.
+
+opacity: 0; 스크린리더가 내용을 무시한다.
+
+<편법>
+width: 0; height: 0; 무시
+width: 1px; height: 1px; 읽어요
+
+.blind{
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ clip: rect(0 0 0 0);
+ oveflow: hidden;
+}
+
+
+position: absolute;
+  left: -999px;
+화면에서 사라지지만 리더기가 읽는다.
+
+font-size: 0; 리더기가 무시한다.
+
+
+aria-label
+aria-labeledby
+접근가능한 숨김방법에 조사해보자.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

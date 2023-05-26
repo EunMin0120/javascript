@@ -1,0 +1,19 @@
+내 github : https://github.com/EunMin0120
+강사님 github : https://github.com/knyatom
+부트스트랩 : https://getbootstrap.kr/
+can i use : https://caniuse.com/
+카페 : https://cafe.daum.net/knyatom
+버튼 만들기 : https://www.bestcssbuttongenerator.com/
+XE ICON : http://xpressengine.github.io/XEIcon/index.html
+포트폴리오 예시 : http://knyatom2.dothome.co.kr/
+ICO convert(탭바 아이콘만들기) : https://icoconvert.com/
+어도비 컬러(컨셉으로 색상찾기) : https://color.adobe.com/ko/create/color-wheel
+Swiper (아마도 이미지슬라이드?) : https://swiperjs.com/
+학원 온라인 강의 : https://ezenmr.step.or.kr/main.do
+SASS : https://paullabworkspace.notion.site/23157e6484a64582853c7867f9b88150?v=492e2c8d7a8e4e369c8badfecc5c6676
+CSS 사용동향 사이트(설문조사 통계같은): https://2021.stateofcss.com/en-US/
+차트 사이트 : https://www.amcharts.com/
+모질라 : https://developer.mozilla.org/ko/docs/Web
+개발질문 사이트 : https://stackoverflow.com/
+JSONPlaceholder : https://jsonplaceholder.typicode.com/
+모던 JS 듀토리얼 : https://ko.javascript.info/

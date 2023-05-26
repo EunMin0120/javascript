@@ -1,0 +1,6 @@
+BootStrap
+
+Mobile first - 모바일 사용량이 많아져서 모바일용 화면을 먼저 만들고 반응형으로 웹에서도 사용 가능한
+open source toolkit
+
+CDN - 다운로드 받지않고 웹에서 불러오는 방식
