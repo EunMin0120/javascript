@@ -6,7 +6,7 @@
 
 // 콜백함수
 // 함수를 매개변수로 받는 경우
-function add(a,b,callback){
+    function add(a,b,callback){
     var result=a+b;
     callback(result)
 }
@@ -91,3 +91,5 @@ function bgChange(){
 //  button.onclick=function(){
 //     bgC()
 //  };
+var hi = document.querySelectorAll('.hi')
+console.log(hi)
