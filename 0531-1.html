@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규표현식</title>
+    
+</head>
+<body>
+    <h2> 웹스토리지, localStorage, sessionStorage, 쿠키 </h2>
+    <h3>1. 로컬 스토리지</h3>
+    <p>브라우져를 닫아도 데이터가 유지된다.</p>
+    <h3>2. 세션 스토리지</h3>
+    <p>브라우져를 닫으면 데이터가 삭제된다.</p>
+    <p>키값, key-value 쌍 형태로 저장.</p>
+    <p>로컬페이지 방문 횟수 : <span id="count"></span></p>
+    <p>세션페이지 방문 횟수 : <span id="count2"></span></p>
+<!-- local button -->
+    <p>
+        <button onclick="inCounter()" type="button">로컬클릭</button>
+    </p>
+    <p>
+        <button onclick="reCounter()" type="button">초기화</button>
+    </p>
+    <div id="target"></div>
+<!-- session button -->
+    <p>
+        <button onclick="inCounter2()" type="button">세션클릭</button>
+    </p>
+    <p>
+        <button onclick="reCounter2()" type="button">초기화</button>
+    </p>
+    <div id="target2"></div>
+
+    <br><br><hr>
+
+    <script>    
+    function inCounter() {
+        if(!localStorage.count) localStorage.count=0;
+        localStorage.count++;
+        target.innerHTML=localStorage.count+"번 클릭했습니다.";
+    }
+    function reCounter() {
+        localStorage.removeItem('count');
+        // localStorage.count=0;
+        target.innerHTML="초기화 완료";
+    }
+
+    function inCounter2() {
+        if(!sessionStorage.count) sessionStorage.count=0;
+        sessionStorage.count++;
+        target2.innerHTML=sessionStorage.count+"번 클릭했습니다.";
+    }
+    function reCounter2() {
+        sessionStorage.removeItem('count');
+        // sessionStorage.count=0;
+        target2.innerHTML="초기화 완료";
+    }
+
+
+    if(!localStorage.pageLoadCount) localStorage.pageLoadCount=0;
+    localStorage.pageLoadCount=parseInt(localStorage.pageLoadCount)+1;
+    count.textContent=localStorage.pageLoadCount;
+    
+    
+    if(!sessionStorage.pageLoadCount) sessionStorage.pageLoadCount=0;
+    sessionStorage.pageLoadCount=parseInt(sessionStorage.pageLoadCount)+1;
+    count2.textContent=sessionStorage.pageLoadCount;
+
+    if(document.cookie){
+        console.log('창열림')
+    }
+    else{
+        console.log('창닫힘')
+    }
+
+    </script>
+    <script src="js/0531-1.js"></script>
+</body>
+</html>

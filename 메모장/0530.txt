@@ -8,3 +8,28 @@ if(val.replace(/[가-힝]/g,"").length==0){
 1 -> 캡쳐링
 2 -> target
 3 -> 버블링
+
+
+이벤트 위임
+$('div').on('click a', function() { });
+
+
+mouseover와 mouseenter의 차이점
+
+mouseover / mouseenter
+mouseout / mouseleave
+
+
+
+clientX -> 보이는 브라우져 화면 기준
+offsetX -> 부모박스를 기준
+pageX -> 전체문서를 기준, 스크롤화면 포함
+screenX -> 모니터화면을 기준, 브라우져가 아니고 자신의 모니터화면을 기준
+
+========================================
+
+로컬 스토리지 / 세션 스토리지 / 쿠키
+정규표현식
+추가적인 ES5 내장객체 (어려움)
+
+========================================

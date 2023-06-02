@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax 실습하기</title>
+    <style>
+        #target{ border:1px solid; width:400px; height: 300px; overflow:scroll;}
+    </style>
+</head>
+<body>
+    <h1> ajax 실습하기</h1>
+    <h2>Asynchronous javascript and XML</h2>
+    <div id="target"></div>
+    <button onclick="getData()" type="button">GET DATA</button>
+    
+    <script>
+    function getData(){
+        var req=new XMLHttpRequest();
+        console.log(req);
+        req.onreadystatechange=function(){
+            if(req.readyState==4 && req.status==200){
+                target.innerHTML=req.responseText;
+            }
+        }
+        req.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+        req.send();
+    }
+
+    
+
+    
+
+    // setTimeout(function(){
+    // document.write(req.responseText);
+    // console.log(req.responseText);
+    // },1000)
+
+    </script>
+
+
+    <script src="js/0531-2.js"></script>
+</body>
+</html>
