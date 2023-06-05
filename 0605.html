@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES5 내장객체</title>
+</head>
+<body>
+    <h1>'call', 'apply', 'bind' 에 대해서</h1>
+    <h2>바닐라 자바스크립트 실습</h2>
+    <h2>이미지 슬라이드 만들기</h2>
+    <div id="slider">
+        <div class="item">
+            <h1>1. one</h1>
+        </div>
+        <div class="item">
+            <h1>2. two</h1>
+        </div>
+        <div class="item">
+            <h1>3. three</h1>
+        </div>
+        <div class="item">
+            <h1>4. four</h1>
+        </div>
+        <div class="item">
+            <h1>5. five</h1>
+        </div>
+    </div>
+    <h2>순환하는 이미지 슬라이드</h2>
+    <div id="gallery2">
+        <ul>
+            <li style="left:0">이미지0</li>
+            <li>이미지1</li>
+            <li>이미지2</li>
+            <li>이미지3</li>
+            <li>이미지4</li>
+        </ul>
+        <p><button>Left</button> <button>Right</button></p>
+    </div>
+
+    <script>
+        var LI=document.querySelectorAll('ul>li');
+        var LEFT=document.querySelector('p button:first-child')
+        var RIGHT=document.querySelector('p button:last-child')
+
+        var prev=0;
+        var current=0;
+        var next=0;
+
+        LEFT.onclick=function(){
+            Linit();
+            prev=LI[current];
+            prev.style.left='-100%';
+            current++;
+            
+            if(current % 5 == 0){
+                current=0; Linit();
+            }
+            next=LI[current];
+            next.style.left='0%'
+            
+        }
+        RIGHT.onclick=function(){
+            Rinit();
+            prev=LI[current];
+            prev.style.left='100%';
+            current++;
+            
+            if(current % 5 == 0){
+                current=0; Rinit();
+            }
+            next=LI[current];
+            next.style.left='0';
+
+            function Linit(){
+                for(var i=0; i<LI.length; i++){
+                    LI[i].style.left="-100%"
+                }
+            }
+            function Rinit(){
+                for(var i=0; i<LI.length; i++){
+                    LI[i].style.left="100%"
+                }
+            }
+
+
+            
+        }
+
+        const SHOW="show";
+        const firstSlide=document.querySelector('.item:first-child');
+        console.log(firstSlide);
+
+        function slide(){
+            var currentSlide=document.querySelector("."+SHOW);
+            var currentSlide=document.querySelector(`.${SHOW}`);
+
+            if (currentSlide) {
+                currentSlide.classList.remove(SHOW);
+                var nextSlide=currentSlide.nextElementSibling;
+                if(nextSlide){
+                nextSlide.classList.add(SHOW);
+                }else{
+                    firstSlide.classList.add(SHOW);
+                }
+            }else{
+            firstSlide.classList.add(SHOW);
+            }
+        }
+        slide();
+        var STOP=setInterval(slide,2000);
+        // mouse event로 마우스 올리면 슬라이드 중지
+
+        var slider=document.getElementById('slider');
+        slider.addEventListener('mouseenter',function(){
+            clearInterval(STOP);
+        });
+        slider.addEventListener('mouseleave',function(){
+            setInterval(slide,2000);
+        });
+    </script>
+
+
+    <script src="js/0605.js"></script>
+    <link rel="stylesheet" href="js/style.css">
+</body>
+</html>

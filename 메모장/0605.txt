@@ -1,0 +1,48 @@
+call, apply, bind 에 대해서
+프라미스 await/ async
+콜백지옥
+class 문법
+ajax 실습
+---------------------------------
+클래스
+생성자
+상속 extends
+단일상속
+다중상속
+인터페이스, 추상화
+오버라이딩
+오버로딩
+
+프라미스 await/ async
+promise
+
+$(css선택자).css('color','red');
+$('h1').css('color','red';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
