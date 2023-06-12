@@ -1,0 +1,11 @@
+html, css, javascript, jquery + node.js, java
+
+
+MySQL, OracleSQL -> 관계형
+몽고DB -> 비관계형
+
+문서높이
+스크롤길이 scroll Top
+윈도우높이
+
+스크롤탑 + 윈도우높이 = 스크롤높이

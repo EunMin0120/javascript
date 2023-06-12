@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0608-1</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    
+</head>
+<body>
+    <h1> html() 메서드로 콘텐츠를 동적으로 추가하기 3~4가지 </h1>
+    <button> 문서 가져오기1</button><button> 문서 가져오기2</button><button> 문서 가져오기3</button>
+    <div id="content"></div>
+    <ul>
+        <li>2</li>
+    </ul>
+    <ul id="none" style="display: none;">
+        <li>none</li>
+    </ul>
+    <script>
+        $('button').on('click',function(){
+            var str="<ul><li>1</li><li>2</li><li>3</li></ul>"
+            $('#content').html(str);
+        })
+
+        $('button').eq(1).on('click',function(){
+            var str="<ul>";
+                str+="<li>11</li>";
+                str+="<li>22</li>";
+                str+="<li>33</li>";
+                str+="</ul>";
+        $('#content').html(str);
+        })
+        
+        $('button').eq(2).on('click',function(){
+        $('#content').html($('#none').html());
+        })
+
+        // // 정적요소에 이벤트
+        // $('li').on('click',function(){
+        //     $(this).css('background','red')
+        // })
+
+        // // 동적요소에 이벤트
+        // $(document).on('click','li',function(){
+        //     $(this).css('color','red')
+        // })
+
+        // 동적요소에 이벤트를 객체스타일로
+            $(document).on({
+                'click':function(){ $(this).css('background','pink') },
+                'mouseenter':function(){ $(this).css('background','skyblue') },
+                'mouseleave':function(){ $(this).css('background','white') },
+            },'li')
+    </script>
+</body>
+</html>

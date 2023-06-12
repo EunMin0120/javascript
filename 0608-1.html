@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0608-1</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/0608.js" defer></script>
+    <style>
+        .color0{color:red}
+        .color1{color:blue}
+        .color2{color:green}
+        .color3{color:lime}
+        .color4{color:gold}
+        .color5{color:gray}
+        .color6{color:orange}
+        .color7{color:pink}
+    </style>
+</head>
+<body>
+<form name="login">
+<p>
+    나이:<input type="text" name="age" onkeypress="checkData()">
+</p>
+</form>
+<script>
+    // 숫자만 입력한다.
+    function checkData(){
+        alert(event.keyCode);
+        // event.returnValue=true;
+        if(!(event.keyCode>=48 && event.keyCode<=57)){
+            alert("숫자만 입력하세요");
+        event.returnValue=false;
+        }
+    }
+</script>
+
+    <h2>아래 리스트를 1초단위로 배경식이 순차적으로 변경되게 하세요</h2>
+    <ul id="wrapper">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+    </ul>
+    <button>addClass</button>
+    <button>removeClass</button>
+    <button>toggleClass</button>
+    <hr>
+    <img src="./imgs/먼치킨.jpg">
+    <img src="./imgs/먼치킨.jpg">
+    <img src="./imgs/먼치킨.jpg">
+    <hr>
+    <input type="text">
+    <script>
+        var color=["red","orange","yellow","green","blue","navy","purple","pink"]
+        var i=0;
+        setInterval(() => {
+            $('#wrapper li').eq(i).css('background',color[i])
+            i++;
+            if(i==9){
+                $('#wrapper li').css('background','none')
+            }
+            i=i % (color.length+1);
+        }, 1000)
+    </script>
+</body>
+</html>
