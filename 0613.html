@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0613</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/0613.js"></script>
+    <style>
+        #img img{width: 200px; height: 200px;}
+    </style>
+</head>
+<body>
+    <h1>폼관련 이벤트</h1>
+    <!-- <form action="회원가입.jsp">
+        <select>
+            <option value="daum">다음</option>
+            <option value="naver">네이버</option>
+            <option value="google">구글</option>
+        </select>
+        <input type="submit">
+    </form> -->
+    <div id="info"></div>
+    <h2> load 와 ready 의 차이점</h2>
+    <p> load와 이미지또는 프레임요소에 연동된 소스가 완료된 후</p>
+    <pre>ready는 문저객체가 로딩이 완료된 후</pre>
+    <!-- <div id="wrap">
+        <iframe src="http://www.daum.net"></iframe>
+    </div> -->
+    <hr>
+    <div id="parent">
+        <input type="text">
+    </div>
+    <h3> 슬라이드바 있는 이미지 슬라이드 </h3>
+    <input type="range" min="0" max="5" value="0">
+    <span></span>
+    <div id="img"style="display: ">
+        <img src="/imgs/먼치킨.jpg">
+        <img src="/imgs/먼치킨2.jpg">
+        <img src="/imgs/먼치킨3.jpg">
+        <img src="/imgs/먼치킨4.jpg">
+        <img src="/imgs/먼치킨5.jpg">
+
+    </div>
+    <script>
+        $('#img img').hide();
+        $('#img img').eq(0).show();
+        $('input[type=range]').on('mousemove mousedown mouseup', function(){
+            var range=$(this).val();
+            $('span').html(range)
+            $('#img img').stop().hide();
+            $('#img img').eq(range).slideDown('slow');
+        })
+        var i=0;
+        setInterval(function() {
+            i++; i = i % 5;
+            $('span').html(i+1)
+            $('#img img').fadeOut();
+            $('#img img').eq(i).slideDown('slow');
+        }, 2000);
+
+
+
+
+        $('.parent').focusout(function(){
+            $('<h2>부모 focusout</h2>').appenTo('body')
+        })
+        $('input').blur(function(){
+            $('<h2>자식 blur </h2>').appenTo('body')
+        })
+        $('.parent').blur(function(){
+            $('<h2>부모 blur </h2>').appenTo('body')
+        })
+        $('input').focusout(function(){
+            $('<h2>자식 focusout </h2>').appenTo('body')
+        })
+        $('.parent').focusin(function(){
+            $('<h2>부모 blur </h2>').appenTo('body')
+        })
+        $('input').focusin(function(){
+            $('<h2>자식 blur </h2>').appenTo('body')
+        })
+        $('.parent').focus(function(){
+            $('<h2>부모 focus </h2>').appenTo('body')
+        })
+        $('input').focus(function(){
+            $('<h2>자식 focus </h2>').appenTo('body')
+        })
+
+        // setTimeout(function(){
+        //     $('input[type=text]').focusin();
+        // }, 1000);
+        $('input[type=text]').focus()
+            
+        $('iframe').load(function(){
+            $('#wrap').appenTo("<p>로딩완료</p>")
+        })
+        $(document).ready(function(){
+            $('#wrap').appenTo("<p>레디완료</p>")
+        })
+        $('iframe').load(function(){
+            $('#wrap').appenTo("<p>로딩완료</p>")
+        })
+        $(document).ready(function(){
+            $('#wrap').appenTo("<p>레디완료</p>")
+        })
+
+        $('select option').eq(1).attr('selected', true)
+        $('select').change(function(){
+            var val=$('select>option:selected').val()
+            var index=$('select>option:selected').index()
+            var html=$('select>option:selected').html()
+            var text=$('select>option:selected').text()
+
+        var out=`${index} : ${text} : ${html} : ${val}`;
+        $(`<p>${out}</p>`).appendTo('#info')
+
+        })
+    </script>
+</body>
+</text>
+
