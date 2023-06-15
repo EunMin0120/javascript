@@ -1,0 +1,29 @@
+정적파일
+-변화하지 않는 파일
+-html,css,javascript
+-아무리 요청해도 변하지 않는 파일
+-웹서버
+
+동적파일
+dynamic web service
+WAS(톰캣), 미들웨어,
+jsp
+
+
+라우터 
+경로지정
+app.get()
+app.post()
+app.put()
+app.del()
+app.all()
+
+익스프레스로 라우트처리 하는법
+var router=express.Router()
+router=route()
+
+node.js 무중단서비스
+npm install pm2 -g
+pm2 start server2.js --watch
+
+uri mapping 라우트처리

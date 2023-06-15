@@ -1,0 +1,34 @@
+// $.ajax(url,{options});
+$.ajax('/data.xml',{
+    success:function(data){
+        console.log(data);
+    }
+})
+$.ajax('/data.txt',{
+    success:function(data){
+        $('body').append(data);
+        console.log(data);
+    }
+})
+$.ajax('/data.json',{
+    success:function(data){
+        $('body').append(data);
+    }
+})
+$.ajax({
+    url:'/parameter',
+    type:"GET",
+    data:{
+        name:'admin',
+        region:'seoul'
+    },
+    success:function(data){
+        $('body').append(data);
+        console.log(data);
+    }
+})
+// load
+ $('#one').load('/data.html')
+ $('#one').load('/parameter?name=kim&reg=seoul')
+ $('#one').load('/data.xml')
+ $('#one').load('/data.json')

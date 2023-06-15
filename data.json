@@ -1,0 +1,12 @@
+{
+   "books": {
+     "book": [
+       {
+         "name": "datajson ",
+         "publisher": "datajson",
+         "author": "datajson ",
+         "price": "datajson"
+       }
+     ]
+   }
+ }
