@@ -22,6 +22,7 @@
     <script>
         $(document).ready(function () {
             $('button').hide();
+            $('img').slice(1).hide();
 
             $(window).on('scroll',function(){
                 var sct=$(this).scrollTop();
@@ -33,7 +34,33 @@
                     $('#bottom').fadeIn();
                     $('#top').fadeOut();
                 }
-            })
+            
+
+            var oft2=$('.content').eq(1).position().top;
+            console.log(oft2,sct)
+            if(sct>=oft2-200){
+                // $('.content').eq(1).css('font-size',"80px")
+                // $('.content').eq(1).css('transition','1s')
+                $('.content').eq(1).stop().animate({fontSize:"100px"},500)
+            }else{
+                // $('.content').eq(1).css('font-size',"30px")
+                // $('.content').eq(1).css('transition','1s')
+                $('.content').eq(1).stop().animate({fontSize:"30px"},500)
+            }
+        // 스크롤을 내리면 이미지 보이게 하기
+        if(sct<50){
+                $('#img:eq(0)').fadeIn();
+            }else if(sct>=50){
+                $('#img:eq(0)').fadeOut();
+                $('#img:eq(1)').fadeIn();
+            }
+
+        }) // scroll
+
+
+
+
+
             $('#top').click(function(){
                 $('html,body').animate({scrollTop:0},1000);
             });
@@ -47,10 +74,10 @@
 <body>
     <div id="wrapper">
         <button id="bottom">Bottom(아래로)</button>
-        <div class="content">content1</div>
-        <div class="content">content2</div>
-        <div class="content">content3</div>
-        <div class="content">content4</div>
+        <div class="content">content1<img src="/imgs/먼치킨.jpg" width="200px" height="200px" id="img"></div>
+        <div class="content">content2<img src="/imgs/먼치킨2.jpg" width="200px" height="200px" id="img"></div>
+        <div class="content">content3<img src="/imgs/먼치킨3.jpg" width="200px" height="200px" id="img"></div>
+        <div class="content">content4<img src="/imgs/먼치킨4.jpg" width="200px" height="200px" id="img"></div>
         <button id="top">Top(위로)</button>
     </div>
 </body>

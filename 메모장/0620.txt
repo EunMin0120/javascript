@@ -1,0 +1,95 @@
+$.ajax
+$.getJSON
+$.post
+-----------------------------
+이런 작업들도 해야한다.
+
+리팩토링
+중복제거
+반복적인 코드는 함수로 묶는다
+
+예외처리
+----------------------------
+이름이 공백인거 삭제
+
+delete from products where name == '';
+
+mysql> delete from products where name is Null;
+
+
+================================
+자바 1일차
+
+JDK
+자바에서 제공되는 개발용 라이브러리
+
+JRE
+자바 런타임 environment
+자바 프로그램이 실행되는 환경
+
+JVM
+자바 가상 머신
+
+---------------------------------
+static
+별도로 메모리에 올라간다.
+
+package
+패키지. 폴더와 같은 개념
+
+test.main2 : test패키지의 main클래스
+
+클래스명은 대문자로 시작한다.
+
+Main2.java
+Student.java
+
+패키지는 소문자로 적는다.
+
+변수, 메소드, 함수명은 카멜표기법으로
+testMethod()
+studentAvg;
+
+패키지명을 test01
+
+
+new -> java class -> Class
+Interface(설계도)
+
+test01.Test01
+
+클래스 파일은 main 함수에서 생성하거나,
+자체적으로 main 함수를 만든다.
+ 
+main -> enter
+
+void 함수가 반환하는 형이 없다.
+정수형, 문자형, 객체형
+
+
+
+자바스크립트에서 strict mode로
+
+'use strict';
+문법적으로 엄격모드
+
+
+코드 정렬하기
+ctrl + alt + shift + L
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
