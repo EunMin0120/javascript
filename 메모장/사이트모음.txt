@@ -18,3 +18,5 @@ CSS 사용동향 사이트(설문조사 통계같은): https://2021.stateofcss.c
 JSONPlaceholder : https://jsonplaceholder.typicode.com/
 모던 JS 듀토리얼 : https://ko.javascript.info/
 동작원리확인 : https://regexper.com/
+
+자바자료 : https://gitlab.com/easyspubjava/BeginningJAVA/-/tree/main/
